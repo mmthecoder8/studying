@@ -1,0 +1,98 @@
+#CSS-Externo{
+    background-color: aqua;
+}
+
+.fundo-diff{
+    background-color: rgb(95, 152, 212);
+}
+
+.texto-rosa{
+    color: pink;
+}
+
+/*                                                                          Hexadecimal e Hexadecimal abreviado*/ 
+
+#Hexadecimal{
+    color: #FF6400;
+}
+
+#H-abreviado{
+    color: #FF0;
+    background-color: #000;
+}
+
+/*                                                                                                     RGBa */
+
+#rgba{
+    color: rgba(255, 0, 255, 0.5);
+}
+
+/*                                                                                                 Background */
+
+#azulejo{
+    height: 200px;
+    width: 200px;
+    background: url(./imgs/azulejo.jpeg);
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: center;
+     /* vc pode usar só a tag "background" e passar todos os valores, exemplo abaixo (comente a parte de cima 
+     para entender q nn vai mudar nada)
+  background: gray url(./imgs/azulejo.jpeg) no-repeat center;  
+  lembrando q a sequencia é background: 'cor' 'imagem' 'se repete ou nn' 'attachment' e 'posição';
+  */
+  
+}
+
+.ghibli{ /* troca o "." por "#" e vê q tem diferença quando vc fala se é class ou id */
+    color: white;
+    background-image: url(./imgs/ghibli.png);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+/*                                                                           Background Gradiente (degrade)*/
+
+#degrade{
+    height: 100px;
+    background: linear-gradient(to right, red, green 25%, blue);
+}
+/*perceba a unica virgula de diferença entre o 1 e o 2 que faz diferença nesse baguio */
+#degrade2{
+    height: 100px;
+    background: linear-gradient(to right, red, green, 25%, blue);
+}
+
+#degrade3{
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(135deg, rgb(255, 0, 255), rgb(0, 255, 255));
+}
+
+#degrade4{
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to bottom left, rgb(179, 255, 0), rgb(132, 0, 255));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
