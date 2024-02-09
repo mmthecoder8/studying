@@ -77,14 +77,70 @@
 }
 
 
+/*                                                                                Unidades de medida fixas */
 
 
+#px{
+    color: white;
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+
+#pt{
+    color: white;
+    background-color: black;
+    width: 50pt;
+    height: 50pt;
+}
+
+#mm{
+    background-color: red;
+    width: 50mm;
+    height: 50mm;
+}
+
+#pc{
+    background-color: greenyellow;
+    width: 50pc;
+    height: 50pc;
+}
+
+#cm{
+    background-color: aqua;
+    width: 5cm;
+    height: 5cm;
+}
 
 
+#in{
+    background-color: orange;
+    width: 5in;
+    height: 5in;
+    
+}
 
 
+/*                                                                                Unidades de medida relativas */
+.masqueico{
+    width: 50%;
+    height: 80%;
+}
+
+#fundo-m1{
+    background-color: purple;
+    width: 80vw;
+    height: 300px;
+}
+
+#fundo-m2{
+    background-color: yellowgreen;
+    width: 500px;
+    height: 30vh;
+}
 
 
+/*--------Aula de Unidades de medida relativas para fontes tá em outra pasta aqui em básico*/
 
 
 
