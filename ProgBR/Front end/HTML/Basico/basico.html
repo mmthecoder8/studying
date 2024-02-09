@@ -15,7 +15,7 @@
 
     <p>paragrafo</p>
 
-    <!---------------------------------------------------------------------------------Formatação de texto-->
+<!------------------------------------------------------------------------------------------Formatação de texto-->
 
     <p><b>Texto em negrito sem semantica</b></p>
     <p><strong>Texto em negrito com semantica</strong></p>
@@ -33,6 +33,99 @@
     <p><del>Este texto foi removido</del> <ins>e substituido por esse</ins></p> 
     <!--del e ins tem essa semantica-->
 
+    <!--use a tag <br> para quebra de linha-->
+    <p>quebra <br>
+       de <br> 
+       linha
+    </p>
+
+<!--------------------------------------------------------------------------------------------------------Links-->
+
+    <a href="http://127.0.0.1:5500/ProgBR/Front%20end/CSS/Basico/index.html">Link para o arquivo de CSS básico
+    </a> 
+    <br>
+    <a href="/ProgBR/Front end/CSS/Basico/index.html">Link "mais facil" para o arquivo de CSS básico</a>
+    <br>
+    <a href="https://www.youtube.com/watch?v=5k7pk272Lrw">Primeiro vídeo do CAC</a>
+
+<!------------------------------------------------------------------------------------------------------Imagens-->
+    <br><br>
+    <img src="cac.jpeg" alt="Logo do CAC" width="100px">
+
+    <img src="https://yt3.googleusercontent.com/Lc1_3K6gFGwQfY5BaVAK82g18Ryv-Z3WJONafw3tukUa9-Htz0WDcEmtZazzMAeihphYFtIlsQ=s176-c-k-c0x00ffffff-no-rj" 
+    alt="Logo do CDN" height="100">
+
+<!----------------------------------------------------------------------------------Figure (ou legenda de foto)-->
+    <figure>
+        <img src="https://yt3.googleusercontent.com/mrTr4M4_gBkiR9tsO2V3X-7F0PxoCKwkmSZsxynUj1k1PLVBEuihUYQqjysnPlebherdTq_NS-s=s176-c-k-c0x00ffffff-no-rj"
+         alt="Logo do Cortes">
+         <figcaption>Logo do Cortes - Leon e Nilce</figcaption>
+    </figure>
+
+
+<!------------------------------------------------------------------------------------------------------Listas-->
+
+<!--Lista nn ordenada-->
+    <h3>Compras</h3>
+
+    <ul>
+        <li>Maça</li>
+        <li>Jaca</li>
+        <li>Kiwi</li>
+    </ul>
+
+<!--Lista ordenada e brincando um pouco com isso-->
+    <h3>Prioridades de agentes</h3>
+
+    <h5>Instalocks</h5>
+    <ol>
+        <li>Raze</li>
+        <li>Reyna</li>
+        <li>Omen</li>
+    </ol>
+
+    <h5>Evita dog</h5>
+
+    <ol reversed type="I">
+        <li>Deadlock</li>
+        <li>Yoru</li>
+        <li>Phoenix</li>
+    </ol>
+
+    
+    <h5>alfabeto começando no D</h5>
+    <ol start="4" type="a">
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+
+<!--Tem varios types, lembra de dar uma olhada pra usar o q vc vai querer de fato-->
+
+<!------------------------------------------------------------------------Links Telefone, WhatsApp e Instagram-->
+    <h1>Lista de Contatos</h1>
+
+    <ul>
+        <li>
+            <b>Nome:</b> Miguel <br>
+            <b>Telefone:</b><a href="tel: +5561999849027">+55 (61) 99984-9027</a> <br>
+        </li>
+        <br>
+        <li>
+            <b>Nome:</b> 21 Savage <br>
+            <b>Whats:</b><a target="_blank" href="https://wa.me/41312321321"> 41312321321</a>
+        </li>
+        <br>
+        <li>
+            <b>Nome:</b> Billie Elish <br>
+            <b>Email da cria: </b> <a href="mailto:emaildabillie@gmail.com">emaildabillie@gmail.com</a>
+        </li>
+    </ul>
+
+    <!-- 
+        Isso abaixo funciona caso o usuario tenha o insta baixado
+        <b>Insta:</b><a href="instagram://user?username=mmthecoder">@mmthecoder</a> 
+    -->
 
 </body>
 </html>
