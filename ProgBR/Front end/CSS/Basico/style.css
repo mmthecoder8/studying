@@ -1,3 +1,8 @@
+body{
+    margin-bottom: 100px;
+}
+
+
 #CSS-Externo{
     background-color: aqua;
 }
@@ -32,7 +37,7 @@
 #azulejo{
     height: 200px;
     width: 200px;
-    background: url(./imgs/azulejo.jpeg);
+    background: url(./coisas/azulejo.jpeg);
     background-color: gray;
     background-repeat: no-repeat;
     background-position: center;
@@ -46,7 +51,7 @@
 
 .ghibli{ /* troca o "." por "#" e vê q tem diferença quando vc fala se é class ou id */
     color: white;
-    background-image: url(./imgs/ghibli.png);
+    background-image: url(./coisas/ghibli.png);
     background-attachment: fixed;
     background-size: cover;
 
@@ -142,13 +147,327 @@
 
 /*--------Aula de Unidades de medida relativas para fontes tá em outra pasta aqui em básico*/
 
+/*                                                                                                      Fontes*/
+
+#fonte-mudada{
+    font-family: 'Courier New', Courier, monospace; 
+    /* Quando vc tem 3 fontes em sequencia assim, uma é backup da outra, da esquerda pra direita.
+     Ou seja, nesse caso, se o pc do usuario nn conseguir carregar o Courier New,  ele vai tenta carregar
+     a Courier e se não conseguir vai carregar a monospace generica (SEMPRE DE UMA MAIS ESPECIFICA PARA
+     UMA MAIS GENERICA, LEMBRE DISSO)*/
+    background-color: rgb(194, 194, 194);
+}
+
+#serif{
+    font-family: serif;
+}
+
+#sans-serif{
+    font-family: sans-serif;
+}
+
+#monospace{
+    font-family: monospace;
+}
+
+#cursive{
+    font-family: cursive;
+}
+
+#CSMS{
+    font-family: "Comic Sans MS";
+}
+
+#italico{
+    font-style: italic;
+    font-size: 20px;
+}
+
+#peso{
+    /*Coloque valores de 100 ("leve") até 1000 ("pesado") ou use os termos "bold" e "lighter" */
+    font-weight: 600;
+}
+
+#variant{
+    font-variant: small-caps;
+}
+
+/*-------Fontes Customizadas */
+
+.single-day-regular {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.maiorzin{
+    font-size: 20px;
+}
+
+/* fontes baixadas tem q ter um carinho a mais do q só linkar, tem a tal da @font-face Rule */
+
+@font-face {
+    font-family: ProtestRevolution;
+    src: url(./coisas/ProtestRevolution-Regular.ttf);
+}
+
+@font-face {
+    font-family: Sixtyfour;
+    src: url(./coisas/Sixtyfour-Regular.ttf);
+}
+
+#ProtestRevolution{
+    font-family: ProtestRevolution;
+}
+
+#Sixtyfour{
+    font-family: Sixtyfour;
+}
+
+
+/*                                                                                                      Borders*/
+
+#b1{
+    border-width: 5px 10px 1px 20px;
+    border-style: solid;
+    height: 100px;
+}
+
+#b2{
+    border-width: 5px;
+    border-style: dotted;
+    height: 100px;
+}
+
+#b3{
+    border-width: 5px;
+    border-style: solid;
+    border-color: red blue green orange;
+    height: 100px;
+}
+
+#b4{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+}
+
+#b5{
+border: 3px solid green; 
+/* usando a propriedade border, somente esses 3 valores podem ser passados: espessura, tipo e cor */
+}
 
 
 
+/*                                                                                             Margin e Padding*/
+
+#zerom{
+ margin: 0;
+}
+
+#MP1{
+    background-color: greenyellow;
+    border: 5px solid red;
+    margin: 0 1em 5px 2em;
+    padding: 1.25em;
+}
+
+#MP2{
+    background-color: purple;
+    height: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#MP3{
+    background-color: aquamarine;
+    height: 100px;
+}
+
+#MP4{
+    background-color: rgb(0, 238, 255);
+    padding: 100px 5px 50px 30px;
+    margin-top: 0;
+}
+
+
+/*                                                                                       Box Model e Box sizing*/
+
+#boxmodel{
+    height: 200px;
+}
+
+#BMBS1{
+    color: white;
+    background-color: blue;
+    height: 110px;
+    width: 110px;
+    border: 10px solid aqua;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#BMBS2{
+    color: white;
+    background-color: red;
+    height: 110px;
+    width: 110px;
+}
+
+#v{
+    color: red;
+}
+
+#a{
+    color: blue;
+}
+
+/*                                                                                                    Overflow*/
+
+.Of{
+    width: 250px;
+    height: 100px;
+    background-color: gray;
+}
+
+#Of1{
+margin: 0;}
+
+
+/*                                                        Alinhamento Horizontal, É BOM REVER ISSO AQUI DE FATO*/
+
+#AHdiv{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin-left: auto; /*Quando se coloca 'margin-left: "auto"', o objeto sempre fica o mais à direita possivel*/
+}
+
+#AHp{
+    width: 300px;
+    background-color: gray;
+    margin: auto;  /*Quando se coloca 'margin: "auto"', o left e right "briga" e sempre deixa o elemento
+    no meio, enquanto o top e bottom só zera*/
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Centralizar uma imagem nn é intuitivo, vc deve colocar a img dentro de uma div e usar "text-align: 'center'"
+na div, não dá pra usar margin por não ser um elemento que ocuparia a tela toda. Eu digo que é contra intuitivo 
+por conta da imagem nn ser um texto (vc fez isso com CSS inline aqui neste caso)*/
+
+#AHimg{
+    width: 300px;
+    text-align: center;
+}
+
+/*                                                    Brincando com pseudo classes para mudar o estilo de links*/
+
+/* ​Propriedades que conseguimos modificar usando pseudo classes independentemente do tipo de elemento que 
+estamos modificando:
+
+color,
+
+background-color,
+
+border-color, border-bottom-color, border-left-color, border-right-color, border-top-color
+
+column-rule-color,
+
+outline-color,
+
+text-decoration-color,
+
+text-emphasis-color,
 
 
 
+pseudo classes deve ser utilizado com ":" após um elemento, class ou id e colocando algum "valor" dps,
+veja os exemplos abaixo
+*/
+
+#youtube{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10%;
+                                text-decoration: none;
+}
+
+#twitch{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+#youtube:visited{
+    background-color: gray;
+}
+
+#youtube:hover{
+    background-color: red;
+}
+
+#youtube:active{
+    background-color: rgb(0, 255, 0);
+}
+
+
+#twitch:hover{
+    background-color:purple;
+}
+
+
+/*                                                                                                      Listas*/
+
+#disc{
+    list-style-type: disc;
+}
+
+#circle{
+    list-style-type: circle;
+}   
+
+#square{
+    list-style-type: square;
+}
+
+#none{
+    list-style-type: none;
+}
+
+#personalizada{
+    list-style-image: url(./coisas/azulejo.jpeg);
+    margin-left: 100px;
+}
 
 
 
+#I{
+    list-style: upper-roman;
+    border: 3px dotted black;
+    margin-bottom: 3px;
+    padding: 0;
+}
 
+#A{
+    list-style: upper-alpha;
+    border: 3px dotted black;
+    list-style-position: inside;
+}
+
+#tl{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.itl/*item da terceira lista*/{
+    font-size: 20px;
+    background-color: rgb(0, 165, 165);
+    margin: 10px;
+    border-radius: 2px;
+}
