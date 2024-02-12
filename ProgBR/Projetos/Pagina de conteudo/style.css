@@ -90,11 +90,11 @@ p{
 }
 
 hr{
-    margin: 5vw 0 ;
+    margin: 48px 0 ;
     color: white;
 }
 
-/* Começo do conteúdo */
+/* Conteúdo */
 
 .conteudo{
     width: 700px;
@@ -113,8 +113,14 @@ hr{
 
 /* Segundo ponto */
 
+figure{ /* Esse figure foi uma correção posterior */
+    padding: 0;
+    text-align: center;
+}
+
 #zelensky{
     width: 600px;
+    margin: 30px auto 0; /* Essa linha foi uma correção posterior */
 }
 
 figcaption{
