@@ -25,6 +25,12 @@ a{
     margin-left: 20px;
 }
 
+p{
+    text-align: justify;
+    line-height: 26px;
+    text-indent: 50px;
+}
+
 
 
 
@@ -59,49 +65,58 @@ a{
 }
 
 #content{
-    width: 700px;
+    width: 800px;
+    margin: 60px;
     margin: auto;
     line-height: 40px;
 }
 
-#ingredientes:hover{
+.box{
+    width: 600px;
+    margin-top: 40px;
     border-radius: 10px;
-    background-color: aqua;
+    cursor: url('./imgs/cursor_ingredientes.png'), pointer;
+    padding: 50px;
+}
 
+.box2{
+    width: 600px;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: url('./imgs/cursor_preparo.png'), pointer;
+    padding: 50px;
+}
+
+.box3{
+    width: 600px;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: url('./imgs/cursor_intrucoes.png'), pointer;
+    padding: 50px;
+}
+
+.hover:hover{
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.2);
 }
 
 
-#MP{ /* MP = Modo de Preparo */
+/* Footer */
 
+#footer{
+    background-color: #ff6b28;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 50px 0 ;
 }
 
+#link-footer{
+    padding: 0;
+    margin-left: 0;
+    color: rgb(255, 255, 255);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#link-footer:hover{
+    color: blue;
+}
