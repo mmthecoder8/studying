@@ -15,22 +15,23 @@ h3{
 
 }
 
-a{
-    background-color: #ff6b28;
-    text-align: center;    
-    padding: 13px;
-    border-radius: 15px;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
+p, li{
+    line-height: 26px;
 }
 
 p{
     text-align: justify;
-    line-height: 26px;
     text-indent: 50px;
 }
 
+li{
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
 
 
 
@@ -48,14 +49,30 @@ p{
     width: 18vw;
 }
 
-#h-max{
+#bolo{
+    background-image: url(./imgs/hero_bolo.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Abaixo está como eu fiz o bolo a primeira vez, tirei ela pq com background-image é MUITO melhor 
+
+#bolo{
     max-height: 21vw;
     overflow: hidden;
 }
 
-#bolo{
+#img{
     width: 100vw;
 }
+
+Abaixo está como eu fiz o HTML disso
+
+    <div id="bolo">
+        <img id="img" src="./imgs/hero_bolo.jpg" alt="Imagem do bolo">
+    </div>
+*/
 
 /* Conteúdo */
 
@@ -72,31 +89,32 @@ p{
 }
 
 .box{
-    width: 600px;
     margin-top: 40px;
     border-radius: 10px;
-    cursor: url('./imgs/cursor_ingredientes.png'), pointer;
     padding: 50px;
 }
 
-.box2{
-    width: 600px;
-    margin-top: 40px;
-    border-radius: 10px;
-    cursor: url('./imgs/cursor_preparo.png'), pointer;
-    padding: 50px;
-}
-
-.box3{
-    width: 600px;
-    margin-top: 40px;
-    border-radius: 10px;
-    cursor: url('./imgs/cursor_intrucoes.png'), pointer;
-    padding: 50px;
-}
-
-.hover:hover{
+.box:hover{
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cursor1{
+    cursor: url('./imgs/cursor_ingredientes.png'), pointer;
+}
+
+.cursor2{
+    cursor: url('./imgs/cursor_preparo.png'), pointer;
+}
+
+.cursor3{
+    cursor: url('./imgs/cursor_intrucoes.png'), pointer;
+}
+
+#comprar{
+    background-color: #ff6b28;
+    padding: 13px;
+    border-radius: 15px;
+    margin-left: 20px;
 }
 
 
@@ -109,12 +127,6 @@ p{
     color: white;
     font-weight: bold;
     padding: 50px 0 ;
-}
-
-#link-footer{
-    padding: 0;
-    margin-left: 0;
-    color: rgb(255, 255, 255);
 }
 
 #link-footer:hover{
