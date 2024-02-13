@@ -1,0 +1,107 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: #ff6b28;
+    font-size: 200%;
+}
+
+h3{
+    color: #ff6b28;
+    margin-top: 100px;
+
+}
+
+a{
+    background-color: #ff6b28;
+    text-align: center;    
+    padding: 13px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+
+
+/* Header */
+
+#top-bar{
+    background-color: #ff6b28;
+    height: 3vw;
+    text-align: center;
+
+    padding: 5px;
+}
+
+#logo{
+    width: 18vw;
+}
+
+#h-max{
+    max-height: 21vw;
+    overflow: hidden;
+}
+
+#bolo{
+    width: 100vw;
+}
+
+/* Conteúdo */
+
+#container{
+    width: 800px;
+    margin: 60px auto 0;
+}
+
+#content{
+    width: 700px;
+    margin: auto;
+    line-height: 40px;
+}
+
+#ingredientes:hover{
+    border-radius: 10px;
+    background-color: aqua;
+
+}
+
+
+#MP{ /* MP = Modo de Preparo */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
