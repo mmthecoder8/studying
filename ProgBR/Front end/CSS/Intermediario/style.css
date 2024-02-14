@@ -1,0 +1,244 @@
+body{
+    padding: 0;
+    margin-bottom: 10000px;
+}
+
+hr{
+    margin: 100px 0;
+}
+
+.border{ 
+    height: 500px;
+    width: 96vw;
+    border: 1px solid;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+/*---------------------------------------------------------------------------------------------------Display--*/
+
+.DC{ /* Display Children */
+    background-color: rgb(167, 167, 167);
+    height: 8vw;
+    margin: 20px;
+}
+
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+}
+
+.inline-block{
+    display: inline-block;
+}   
+
+.none{
+    display: none;
+}
+
+/*---------------------------------------------------------------------------------------------------Position
+
+Move com a página?: S/N
+Ele respeita onde os outros ficariam? O "static" respeita o espaço que ele ficaria? : S/N e S/N
+Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : S/N. 
+
+*/
+
+
+.PC{ /* Position children */
+    height: 100px;
+    width: 100px;
+}
+
+/*
+!!!!!! 
+
+
+
+Eu mudei a ordem das aulas pra fazer mais sentido na página, melhorando a compreensão do q cada um faz
+
+
+
+!!!!!!
+*/
+
+
+/* Sticky obs: ESSE MERDA É MUITO COMPLEXO, TÁ AQUI UM DOS MOTIVOS PRA UMA GALERA FALAR Q CSS É TENTATIVA E ERRO
+
+Move com a página?: S
+Ele respeita onde os outros ficariam? O "static" respeita o espaço que ele ficaria? : Lê aí viado* e S
+Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : S.  Baseado no pai e no viewport
+
+
+*O Miguel do dia 14/02/2024 nn entendeu o pq ele respeitou com top e nn respeitou com bottom. Escvreveu o obs ali
+considerou por conta desse efeito esquisito
+
+
+Serve, por exemplo, para alertas q vc queira q fique fixo. A diferença dele pro "fixed" vai ser q com sticky
+    os outros elementos respeitam o espaço dele, e quando se scrolla a página, os elementos vai tipo passar por
+    trás do sticky. Ele baseia sua posição no pai 
+*/
+
+.sticky-blue{  
+    background-color: blue;
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+
+
+/* Static e Relative */
+
+/*  Relative
+
+Move com a página?: N
+Ele respeita onde os outros ficariam? O "static" respeita o espaço que ele ficaria? : N* e S
+Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : S. Baseado na posição que deveria estar 
+
+*Não dependendo do valor que vc colocar, como no red,ele nn respeita. 
+Se receber nenhum valor pra mudar de posição, ent Sim ele respeita.
+
+*/
+
+
+.relative-red{
+    background-color: red;
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+
+}
+
+.relative-green{
+        /* Esse segundo elemento eu criei como exemplo para lembrar q se eu quissesse grudar o elemento no 
+        canto da página, usar relative nn é a melhor opção 
+        */
+
+    background-color: green;
+    position: relative;
+    left: 820px;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* Absolute 
+
+Move com a página?: N
+Ele respeita onde os outros ficariam? O "static" respeita o espaço que ele ficaria? : N e N
+Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : S. Baseado no pai (funciona se o pai 
+                                                                      estiver com position diferente de "static")
+
+*/
+
+.absolute-black{
+    background-color: black;
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 0;
+    right: 0;
+}
+
+/* Fixed 
+
+Move com a página?: S
+Ele respeita onde os outros ficariam? O "static" respeita o espaço que ele ficaria? : N e N
+Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : S. Baseado no viewport
+
+Serve, por exemplo, para aqueles balõezinhos de contatar suporte que ficam em baixo na página 
+independente do scroll 
+*/ 
+
+.fixed-gainsboro{
+    background-color: gainsboro;
+    font-family: monospace;
+    font-size: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+/* Static e Relative */
+
+/* Static 
+
+Move com a página?: N
+Ele respeita onde os outros ficariam? Outro "static" respeita o espaço que ele ficaria? : S e S
+Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : N 
+
+
+ Static tá em baixo pra entender melhor o respeito com/dos outros 
+ */
+
+.static-gold{
+    background-color: gold;
+    font-size: 13px;
+    position: static;
+    left: 200000000px;
+    bottom: 200000px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------Float */
+
+.border-float{
+    width: 900px;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    overflow: auto;
+}
+
+#img-float{ 
+    float: left; /* se apagar essa linha, vc já vai ver diferença */
+}
+
+#p-float{
+    display: inline; /* se apaga essa linha dps de apagar a do float, vc vai ver outra diferença */
+}
+
+#ul-float{
+    list-style: none;
+}
+
+.li-float{
+    float: left;
+    background-color: aquamarine;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

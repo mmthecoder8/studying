@@ -7,6 +7,129 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!---------------------------------------------------------------------------------------------------Display-->
+
+    <div class="border">
+
+        <div class="DC inline">inline, não ocupa toda a linha, permite outros elementos do lado dele, 
+            mas nn permite alterar a altura e largura</div>
+
+        <div class="DC block">
+            block, ocupa toda a linha, basicamente nn permite outros elementos do lado dele, mas permite alterar
+            a altura e largura
+        </div>
+
+        <div class="DC inline-block">inline-block, não ocupa toda a linha, permite outros elementos do lado 
+            dele, mas permite alterar a altura e largura
+        </div>
+
+        <div class="DC none">Não aparece na tela de jeito nenhum, é como se nunca tivesse sido criado</div>
+    </div>
+
+<!---------------------------------------------------------------------------------------------------Position-->
+<hr>
+
+    <div class="border">
+
+<!--Sticky obs: ESSE MERDA É MUITO COMPLEXO, TÁ AQUI UM DOS MOTIVOS PRA UMA GALERA FALAR Q CSS É TENTATIVA E ERRO
+-->
+
+        <div class="PC sticky-blue">Sticky, leia mais sobre no CSS</div>
+
+<!--Static e Relative-->
+
+        <div class="PC relative-red"></div>
+
+        <div class="PC relative-green">
+            O green só tá colado com a linha se o chrome ocupar metade da tela
+        </div>
+
+<!--Absolute-->
+
+        <div class="PC absolute-black">O black vai ficar no canto superior direito desse retangulo pra sempre</div>
+
+<!--Fixed-->
+
+        <div class="PC fixed-gainsboro">Esse amigo aqui tá com position: fixed, ele vai ficar bem aqui onipresente
+        </div>
+
+
+<!--Static e Relative-->
+
+<!--Static tá aqui pra entender melhor o respeito com/dos outros-->
+
+        <div class="PC static-gold"> 
+            Ele nn sobe pois o red e o green estão com "relative", o gold entende como se eles estivessem 
+            ocupando o espaço
+        </div>
+
+<!--Sticky dnv pra exaltar um bagulho, vai lê no CSS-->
+        <div class="PC sticky-blue" style="bottom: 0;">Sticky dnv pra exaltar um bagulho, vai ver no CSS</div>
+
+    </div>
+
+
+<!---------------------------------------------------------------------------------------------------Float-->
+<hr>
+
+    <div class="border-float">
+        <img id="img-float" src="./basquete.jpg" alt="Bola de Basquete">
+
+        <p id="p-float">
+            Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto 
+            Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer 
+            Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto 
+            Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer Texto Qualquer 
+            Te
+        </p>
+    </div>
+
+    <p>Abaixo temos um formato de menuzin com float</p>
+
+    <ul id="ul-float">
+        <li class="li-float">Home</li>
+        <li class="li-float">Config</li>
+        <li class="li-float">Carrinho</li>
+    </ul>
+
+
+<!----------------------------------------------------------------------------------------Alinhamento Vertical-->
+<hr style="margin-top: 200px;">
+
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
