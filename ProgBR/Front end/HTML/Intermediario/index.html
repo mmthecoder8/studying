@@ -7,5 +7,137 @@
 </head>
 <body>
     
+
+<!-------------------------------------------------------------------------------------------------Formulário -->
+
+    Formulário com get, utilize em pesquisas por exemplo. Este exemplo funciona para pesquisar videos.<br>
+    NUNCA USE PARA CADASTROS, BASICAMENTE EM NENHUMA HIPTOSE
+
+    <form method="get" action="/cadastro">
+        <input type="text" name="email">
+        <input type="text" name="nome">
+        <input type="submit">
+    </form>
+
+    Formulário com post, utilize em cadastros.
+
+    <form method="post" action="/cadastro">
+        <input type="text" name="email">
+        <input type="text" name="nome">
+        <input type="submit">
+    </form>
+
+
+    Forms para pesquisar videos. Um de get e um de post, post nn funciona, só pra lembrar as diferenças
+
+    <form method="get" action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <input type="submit">
+    </form>
+
+
+    <form method="post" action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <input type="submit">
+    </form>
+
+
+<!----------------------------------------------------------------------------------------------Tipos de input -->
+<hr style="margin: 50px 0;">
+
+    <form  method="get" action="">
+        <input type="text"> <br><br>
+
+        <input type="password" > <br><br> <!--O certo é usar com post-->
+
+        <input type="checkbox" name="curso" value="op1">React JS <br>
+        <input type="checkbox" name="curso" value="op2">React Native <br><br>
+
+        <input type="radio" name="mão-dominante" value="R" checked>Destro <br>
+        <input type="radio" name="mão-dominante" value="E">Canhoto <br>
+        <input type="radio" name="mão-dominante" value="B">Ambidestro <br>
+        <input type="radio" name="outro-exemplo" value="outro">Quando muda o name já é outra coisa pra marcar <br><br>
+
+        <!--
+        <input type="reset" value="Limpar">
+        <input type="submit"> 
+        Estes tbm são tipos de inputs importantes, só comentei pq eles se repetem lá em baixo
+        -->
+
+
+<!-----------------------------------------------------------------------------------------------------Select-->
+        <br>
+        <select name="pronome">
+            <option value="ele">Ele/Dele</option>
+            <option value="ela">Ela/Dela</option>
+            <option value="outro">Outro</option>
+            <option value="pnd">Prefiro não dizer</option>
+        </select>
+
+        <select name="classe" multiple>
+            <option value="controlador">Controlador</option>
+            <option value="duelista">Duelista</option>
+            <option value="flex">Flex</option>
+            <option value="iniciador">Iniciador</option>
+            <option value="sentinela">Sentinela</option>
+        </select>
+
+        <select name="estado" size="4">
+            <option value="DF">Distrito Federal</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <option value="GO">Goiás</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+        </select>  <br><br>
+
+<!--Textarea-->
+
+        <textarea name="mensagem" cols="30" rows="10"></textarea> <br><br>
+
+
+<!-------------------------------------------------------------------------------------------------Input HTML 5--
+Abaixo está alguns inputs inseridos, exceto o "type='reset&submit" q são mais antigos, na atualização do HTML5, 
+algumas coisas em alguns navegadores talvez nn funcione. Depedendo do projeto, vc deve testar e pode usar o 
+site CanIUse pra ajudar nisso-->
+
+        <input type="color" name="cor"> <br><br>
+
+        <input type="date" name="data"> Esse segundo tem data máxima
+        <input type="date" name="data" max="2020-12-31"> <br><br>
+
+        <input type="datetime-local" name="data"> <br><br>
+
+        <input type="file" name="arquivo"> <br><br> <!--O certo é usar com post-->
+
+        <input type="number" name="numero"> Esse segundo tem mínimo e máximo
+        <input type="number" name="numero" min="5" max="10"><br><br>
+
+        <input type="range" name="intervalo"> <br><br><!--Pode colocar min e max tbm-->
+
+        <input type="tel" name="telefone"><br><br> <!--Faz mais sentido usar pra celular, dê uma olhada-->
+
+        <input type="email" name="email"><br><br>
+
+        
+        <input type="reset" value="Limpar">
+        <input type="submit">
+    </form> 
+
+<!--------------------------------------------------------------------------------------------Tags Semânticas-->
+
+    <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <section></section>
+        <article></article>
+    </main>
+
+    <footer></footer>
+
 </body>
 </html>
