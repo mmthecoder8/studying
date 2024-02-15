@@ -1,4 +1,5 @@
 body{
+    margin: 0;
     padding: 0;
     margin-bottom: 10000px;
 }
@@ -214,31 +215,96 @@ Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : N
     margin-right: 5px;
 }
 
+/*--------------------------------------------------------------------------------------Alinhamento Vertical */
 
+.border2{ 
+    height: 250px;
+    width: 250px;
+    border: 1px solid;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    float: left;
+}
 
+/* texto do Alinhamento Vertical */
 
+#t-AV1{
+    background-color: lightgreen;
+    line-height: 250px;
+}
 
+#t-AV2{
+    background-color: lightblue;
+    position: absolute;
 
+    top: 50%;
+    left: 50%;
 
+    transform: translate(-50%, -50%);
+}
 
+#AV-p{ /* Alinhamento Vertical com padding, deve-se considerar o tamanho do font-size do texto */
+    font-size: 20px;
 
+    display: inline-block;
+    border: 1px solid;
+    padding: 125px 125px;
+}
 
+/*------------------------------------------------------------------------------------------------Media Queries */
 
+#MQ-box{
+    background-color: lightseagreen;
+    overflow: hidden;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    font-size: 20px;
+    position: relative;
+}
 
+#MQ-logo{
+    float: left;
 
+}
 
+#MQ-lista{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
 
+.MQ-item{
+    float: left;    
+    margin-left: 15px;
+    line-height: 73px;
+}
 
+@media screen and (max-width: 500px) {
 
+    body{
+        overflow: auto;
+    }
 
+    #MQ-box{
+        background-color: red;
+    }
 
+    #MQ-logo{
+        text-align: center;
+        float: none;
+    }
 
+    #MQ-lista{
+        float: none;
+        text-align: center;
+    }
 
-
-
-
-
-
-
-
-
+    .MQ-item{
+        float: none;
+        text-align: center;
+        margin-left: 0;
+    }
+}
