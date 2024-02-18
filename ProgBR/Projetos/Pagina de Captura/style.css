@@ -14,12 +14,12 @@ body{
     font-family: DINNextW1G, arial, georgia, sans-serif;
 }
 
-h3{
+h1, h3{
     margin-top: 0;
 }
 
 #container{
-    width: 950px;
+    width: 940px;
     margin: auto;
 }
 
@@ -92,20 +92,53 @@ main{
 
 /* S2 */
 
+#s2{
+    color: white;
+    background-color: #0f1923;
+    padding: 15px;
+    overflow: auto;
+    font-size: 15px;
+    height: 400px;
+}
+    
+h1{
+    text-align: center;
+}
+
+#kiss{
+    width: 100px;
+    float: left;
+    display: hidden;
+}
+
+#img-float2{ 
+    width: 180px;
+    height: 180px;
+    background-color: gray;
+    float: right; /* se apagar essa linha, vc já vai ver diferença */
+}
+
+#p-float{
+    display: inline; /* se apaga essa linha dps de apagar a do float, vc vai ver outra diferença */
+}
+
+
+#form{
+
+    width: 180px;
+    height: 180px;
+    background-color: gray;
+    float: right;
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
+#s2-p{ 
+    display: inline;    
+}
 
 
 

@@ -200,6 +200,14 @@ Ele aceita valores pra mudar de posição? Se sim, em quem se baseia? : N
     float: left; /* se apagar essa linha, vc já vai ver diferença */
 }
 
+#img-float2{ 
+    width: 180px;
+    height: 180px;
+    background-color: gray;
+    float: right; /* se apagar essa linha, vc já vai ver diferença */
+
+}
+
 #p-float{
     display: inline; /* se apaga essa linha dps de apagar a do float, vc vai ver outra diferença */
 }
