@@ -1,13 +1,12 @@
 @font-face {
     font-family: Tungsten;
-    src: url(./things/Tungsten-Bold.ttf);
+    src: url(./things/fonts/Tungsten-Bold.ttf);
 }
 
 @font-face {
     font-family: DINNextW1G;
-    src: url(./things/DINNextW1G-Regular.ttf);
+    src: url(./things/fonts/DINNextW1G-Regular.ttf);
 }
-
 
 body{
     margin: 0;
@@ -30,7 +29,7 @@ h3{
 header{
     background-color: #ff4655;
     color: white;
-    font-size: 5vw;
+    font-size: 3em;
     padding: 10px;
     text-align: center;
     font-family: Tungsten, Courier, monospace;
@@ -42,8 +41,10 @@ main{
     background-color: none;
 }
 
+/* S1 */
+
 #s1{
-    background-image: url(./things/Nanobomb-gurl-by-@_scriblee.jpeg);
+    background-image: url(./things/imgs/Nanobomb-gurl-by-@_scriblee.jpeg);
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -87,6 +88,39 @@ main{
     padding: 10px;
     text-align: justify;
 }
+
+
+/* S2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
