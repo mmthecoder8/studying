@@ -9,6 +9,7 @@
 }
 
 body{
+    background-color: #0e1922;
     margin: 0;
     padding: 0;
     font-family: DINNextW1G, arial, georgia, sans-serif;
@@ -93,63 +94,60 @@ main{
 /* S2 */
 
 #s2{
-    color: white;
-    background-color: #0f1923;
-    padding: 15px;
-    overflow: auto;
-    font-size: 15px;
+    position: relative;
+    background-color: #ece8e1;
     height: 400px;
+    padding: 15px;
 }
-    
+
 h1{
     text-align: center;
 }
 
 #kiss{
-    width: 100px;
+    position: relative;
+    height: 200px;
     float: left;
-    display: hidden;
+    margin-right: 15px;
 }
 
-#img-float2{ 
-    width: 180px;
-    height: 180px;
-    background-color: gray;
-    float: right; /* se apagar essa linha, vc já vai ver diferença */
+#s2-p{
+    text-indent: 3em;
 }
-
-#p-float{
-    display: inline; /* se apaga essa linha dps de apagar a do float, vc vai ver outra diferença */
-}
-
 
 #form{
-
+    background-color: #ff4655;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    height: 75%;
     width: 180px;
-    height: 180px;
-    background-color: gray;
-    float: right;
+    right: 0%;
+    right: 15px;
+    top: 0%;
+    top: 63.92px;
+}
+
+input{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 4.4px;
+    border: none;
 }
 
 
-
-
-
-
-#s2-p{ 
-    display: inline;    
+select{
+    font-family: DINNextW1G, arial, georgia, sans-serif;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    padding: 5px 53px;
+    border: none;
 }
 
-
-
-
-
-
-
-
-
-
-
+#submit{
+    font-family: DINNextW1G, arial, georgia, sans-serif;
+    padding: 5px 67.1px;
+}
 
 
 
