@@ -445,11 +445,167 @@ for(var jIndex in jNomes){
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////// Objetos 
+console.log("a partir daqui é as aulas sobre Objetos")
 
 //////////////////////// Propriedades
 
+    var student = {
+        name: "Mônica", 
+        notas99: [9.9, 9.0] // sim, isto é um array dentro de um objeto
+}
+
+console.log(student.name) 
+console.log(student["notas99"][0])
+console.log(student.notas99[1])
+
+/* Aqui você pode dar console.log em strays e números com as duas formas, só coloquei assim para mostrar que 
+existe as duas maneiras
+*/
+
+//Abaixo estão formas mais diretas de inserir propriedades
+student.matricula = 12345
+
+student["sobrenome"] = "Silva"
+
+var lastname = "LastName"
+
+student[lastname] = "Oliveira"
+
+
+console.log(student)
+
+// tem como criar um objeto da forma abaixo também
+
+var student1 = new Object()
+
+console.log(student1)
+
+
 //////////////////////// Métodos
 
-//////////////////////// Construtores
+var metodo = {
+    name2: "Carlin",
+    notas88: [8, 4],
 
-//////////////////////// Resumo
+    media88: function () {
+        return (this.notas88[0] + this.notas88[1]) / 2 // o "this" é usada com objetos só, essa parte poderia
+    }                                                  // estar na função "metodoMedia"
+
+}
+
+console.log(metodo.name2)
+console.log(metodo.media88())
+
+/* Essa segunda maneira é melhor para caso você tenha que mudar alguma coisa na sua função, você poderia arrumar
+isso somente na função e todos os seus objetos já atualizariam. Nesse caso foi imaginado assim: "E se o cálculo
+da média mudasse?"
+*/
+
+function metodoMedia(n1, n2){
+        return (n1 * 2 + n2)/2
+
+}
+
+var metodo2 = {
+    name2: "Carlinha",
+    notas88: [5, 9],
+
+    media88: metodoMedia
+
+}
+
+var metodo3 = {
+    name2: "Daniel",
+    notas88: [2, 8],
+
+    media88: metodoMedia
+
+}
+
+console.log(metodo2.name2)
+console.log(metodo2.media88(metodo2.notas88[0], metodo2.notas88[1]))
+
+console.log(metodo3.name2)
+console.log(metodo3.media88(metodo3.notas88[0], metodo3.notas88[1]))
+
+
+//////////////////////// Construtores, essa aula é longa, volte nela depois
+
+function criarAluno(nome, n1, n2, n3){
+    return {
+        nome: nome,
+        nota1: n1,
+        nota2: n2,
+        nota3: n3,
+        media: function () {
+            return (this.nota1 + this.nota2 + this.nota3) / 3
+        }
+    }
+}
+
+
+
+var turma = [
+    criarAluno("Ana", 2, 6, 7),
+    criarAluno("Bia", 6, 5, 9)
+
+]
+
+
+turma.forEach ( function(element){
+
+    console.log(element)
+})
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////// Datas
+console.log("a partir daqui é a aula Datas")
+
+
+console.log("O dia e horário atual é " + new Date())
+
+
+// se quiser colocar uma data específica, abaixo está a "fórmula", basta apagar o que você não quer usar
+
+//new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+console.log("O Miguel nasceu em uma " + new Date(2007, 2, 1, 20, 45))
+
+// fazendo com string, sempre no modelo americano, o mês pode ser passado com número também
+
+console.log(new Date("mar 01 2007 20:45"))
+
+
+// você pode brincar um pouco mais usando métodos, abaixo está um link com diversos desses métodos
+// https://www.w3schools.com/js/js_date_methods.asp
+
+var d = new Date("mar 01 2007 20:45")
+
+console.log(d.getFullYear())
+
+////////////////////////////////////////////////////////////////////////////////////////////// Const, Let e Var
+console.log("a partir daqui é a aula Const, Let e Var")
+
+/* O let, ao contrário da const, pode ser reatribuído, mas ambos tem um escopo mais fechado
+Descomente as chaves que estão juntando o var, o let e a const e perceba o bug
+*/
+//{
+var n1 = 1
+let n2 = 2
+const n3 = 3 
+//}
+/* a const não vai ser reatribuída, ainda assim pode ser modificada, dá pra perceber essa característica com 
+arrays e objetos, veja a aula caso queira lembrar. Descomente a linha de baixo e veja o bug caso tente reatribuir*/
+// n3 = 7
+
+
+console.log(n1)
+console.log(n2)
+console.log(n3)
+
+
+/* Resumindo:
+Var = variável global
+Let = variável local
+Const = Constante local 
+*/
