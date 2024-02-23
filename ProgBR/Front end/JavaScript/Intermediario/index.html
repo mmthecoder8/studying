@@ -11,7 +11,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="loaded()">
 
 
     <h1>Título</h1>
@@ -22,11 +22,45 @@
     <p class="paragrafo">Paragráfo2</p>
     <p>Paragráfo3</p>
 
+<!---------------------------------------------------------------------------------------------------Eventos-->
+<!-----------------------------Parte 1-->
+    <h1 onclick="console.log('H1 foi clickado')">Click em mim</h1>
+    <h2 onclick="h2click()">Click em mim</h2>
+    <h1 onclick="this.style.color = 'red'">Click e mude minha cor</h1>
+
+    <h3 id="h3A">Click no botão azul e me esconda</h3>
+
+    <div onclick="h3hide()" style="background-color: blue; display: inline-block; color: white; padding: 20px;">
+        Botão
+    </div>
+
+
+<!--Existe um monte de eventos, lembre de pesquisar sobre para aprender mais sobre eles-->
+
+<!-----------------------------Parte 2-->
+
+<!-----------------------------Parte 3-->
+
+    <h3 id="abacate">abacate</h3>
+
+
+<!----------------------------------------------------------------------------------Elementos pai e filhos-->
+
+    <div id="d">
+        <h2 id="t">Título</h2>
+        <p>paragráfo</p>
+    </div>
+
+<!-----------------------------------------------------------------------------------------Timer e Intervalo-->
+
+    <h1 id="h">Título</h1>
+
+    <input type="button" onclick="contando()" value="contar">
+    <input type="button" onclick="parar()" value="parar">
 
 
 
 
     <script src="script.js"></script>
-    
 </body>
 </html>
