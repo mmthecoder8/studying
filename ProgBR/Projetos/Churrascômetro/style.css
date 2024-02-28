@@ -8,6 +8,10 @@ h1{
     margin: 0;
 }
 
+p{
+    font-size: 14px;
+}
+
 #card{
     position: relative;
     width: 300px;
