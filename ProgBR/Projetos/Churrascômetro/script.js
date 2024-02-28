@@ -7,6 +7,8 @@ var s = document.getElementById('submit')
 
 var op1 = document.getElementById('output1')
 var op2 = document.getElementById('output2')
+var op3 = document.getElementById('output3')
+
 
 
 
@@ -21,45 +23,15 @@ function soda(){
 }
 
 function beer(){
-    return(hmdb.value * 500 * d.value / 1000)
+    return(Math.ceil( hmdb.value * 500 * d.value / 350))
 }
 
 
 function total(){
     op1.innerHTML = "You will need " + beef() + "kg of beef"
-    op2.innerHTML = "You will need " + beer() + "L of beer and " + soda() + "L of soda"
+    op2.innerHTML = "You will need " + beer() + " beer cans"
+    op3.innerHTML = "You will need " + soda() + "L of soda"
 }
 
 
-
 s.onclick = total
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
