@@ -6,24 +6,31 @@
     <title>HTML avançado</title>
 
     <style>
-        .container{
+        hr{
+            margin: 50px 0;
+        }
+
+        #container{
             position: relative;
             margin-top: 50px;
             width: 297.5px;
             height: 530px;
         }
 
-        .video{
+        #video{
             height: 100%;
         }
 
-        .controls{
-            background-color: aqua;
+        #controls{
             position: absolute;
             top: 0;
             width: 100%;
             height: 100%;
             text-align: center;
+            opacity: 0;
+        }
+        #controls:hover{
+            opacity: 1;
         }
 
         .btn{
@@ -32,6 +39,22 @@
              margin: 10px 0 0 5px;
              top: 90%;
         }
+
+        #screen{
+            position: relative;
+            background-color: beige;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        #square{
+            position: absolute;
+            background-color: rgb(226, 78, 78);
+            width: 30px;
+            height: 30px;
+        }
+
     </style>
 
 </head>
@@ -47,27 +70,86 @@
     <ul id="lista2" data-numero2="5"></ul>
 
 <!-------------------------------------------------------------------------------------------------------Video-->
-
+<hr>
     <video poster="./catbus.jpg" controls autoplay muted loop width="200px" src="./cacvideo.mp4 "></video>
         <!--poster make sense without the loop-->
 
 <!-------------Controle (Parte 1)-->
 
 
-    <div class="container"> 
-        <video src="./cacvideo.mp4" class="video">
+    <div id="container"> 
+        <video src="./cacvideo.mp4" id="video">
         </video>
 
-        <div class="controls">
-            <img class="btn" src="./controls/Subtract-1--Streamline-Flex.png">
-            <img class="btn" src="./controls/Button-Rewind-1--Streamline-Flex.png">
-            <img class="btn" src="./controls/Button-Pause-2--Streamline-Flex.png">
-            <img class="btn" src="./controls/Button-Play--Streamline-Flex.png">
-            <img class="btn" src="./controls/Button-Fast-Forward-1--Streamline-Flex.png">
-            <img class="btn" src="./controls/Add-1--Streamline-Flex.png">
+        <div id="controls">
+            <img class="btn" id="decrease" src="./controls/Subtract-1--Streamline-Flex.png">
+            <img class="btn" id="rewind"   src="./controls/Button-Rewind-1--Streamline-Flex.png">
+            <img class="btn" id="play"     src="./controls/Button-Pause-2--Streamline-Flex.png">
+            <img class="btn" id="pause"    src="./controls/Button-Play--Streamline-Flex.png">
+            <img class="btn" id="forward"  src="./controls/Button-Fast-Forward-1--Streamline-Flex.png">
+            <img class="btn" id="increase" src="./controls/Add-1--Streamline-Flex.png">
         </div>
     </div>
 
+<!------------------------------------------------------------------------------------------------------iFrame-->
+<!--You could use iFrame when you want to inset a content from a different page -->
+<hr>
+
+    <iframe src="./iframe.html" frameborder="0" style="background-color: rgba(100, 100, 100, 0.5);"></iframe>
+
+    <iframe src="https://www.globo.com/" frameborder="0"></iframe>
+
+    <!--This iframe below you can copy from any yt video when you click on share-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fU-5vIHXnwI?si=HYDoq20v74iz5F0P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<!------------------------------------------------------------------------------------------------------Audio-->
+<hr>
+
+    <audio src="./audio/xxx.ogg" controls id="a1"></audio>
+
+    <!--This second way is used to have a second type of file as backup if some browser can't load the first-->
+    <audio controls id="a2">
+        <source src="./audio/xxx.ogg" type="audio/ogg">
+        <source src="./audio/abbot.mp3" type="audio/mpeg">
+    </audio>
+
+<!-----------------------------------------------------------------------------------------Animação com HTML-->
+<hr> <!--This class should be called as: Animação com JS-->
+
+<!--It's better create animations with canvas-->
+
+    <div id="screen">
+        <div id="square"></div>
+    </div>
+
+<!-----------------------------------------------------------------------------------------------------Canvas-->
+<hr>
+<!--Remember that it's not good define the size of canva on CSS. Use width and height at the element -->
+
+<!-----Intro + Linhas-->
+    <canvas id="c1" width="300px" height="300px" style="background-color: lightblue;"></canvas>
+
+
+<!-----Retângulo -->
+    <canvas id="c2" width="300px" height="300px" style="background-color: lightcoral;"></canvas>
+
+
+<!-----Inicio e Fim do caminho (Path) -->
+    <canvas id="c3" width="300px" height="300px" style="background-color: lightgreen;"></canvas>
+
+
+<!-----Circles -->
+    <canvas id="c4" width="300px" height="300px" style="background-color: lightpink;"></canvas>
+
+
+<!-----Animação -->
+    <canvas id="c5" width="300px" height="300px"></canvas>
+
+
+<!-----Imagens -->
+    <img id="mei" src="./mei.jpeg" style="display: none;"> <!--first way to load a image on canvas-->
+    <canvas id="c6" width="300px" height="300px" style="background-color: lightslategrey;"></canvas>
 
 
 
@@ -91,11 +173,7 @@
 
 
 
-
-
-
-
-
+<br><br><br><br><br><br><br><br><br><br>
     <script src="script.js"></script>
 </body>
 </html>
