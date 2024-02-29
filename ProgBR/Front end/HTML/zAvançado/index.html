@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML avançado</title>
+
+    <style>
+        .container{
+            position: relative;
+            margin-top: 50px;
+            width: 297.5px;
+            height: 530px;
+        }
+
+        .video{
+            height: 100%;
+        }
+
+        .controls{
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .btn{
+            position: relative;
+             width: 30px;
+             margin: 10px 0 0 5px;
+             top: 90%;
+        }
+    </style>
+
+</head>
+<body>
+    
+<!-----------------------------------------------------------------------------------Atributos personalizados-->
+
+    <img src="./totoro.jpg" alt="totoro" id="totoro">
+
+
+    <ul id="lista1" numero="4"></ul>
+
+    <ul id="lista2" data-numero2="5"></ul>
+
+<!-------------------------------------------------------------------------------------------------------Video-->
+
+    <video poster="./catbus.jpg" controls autoplay muted loop width="200px" src="./cacvideo.mp4 "></video>
+        <!--poster make sense without the loop-->
+
+<!-------------Controle (Parte 1)-->
+
+
+    <div class="container"> 
+        <video src="./cacvideo.mp4" class="video">
+        </video>
+
+        <div class="controls">
+            <img class="btn" src="./controls/Subtract-1--Streamline-Flex.png">
+            <img class="btn" src="./controls/Button-Rewind-1--Streamline-Flex.png">
+            <img class="btn" src="./controls/Button-Pause-2--Streamline-Flex.png">
+            <img class="btn" src="./controls/Button-Play--Streamline-Flex.png">
+            <img class="btn" src="./controls/Button-Fast-Forward-1--Streamline-Flex.png">
+            <img class="btn" src="./controls/Add-1--Streamline-Flex.png">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
