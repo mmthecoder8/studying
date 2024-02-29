@@ -249,18 +249,4 @@ img.onload = drawImg
 
 function drawImg(){
     c6C.drawImage(this, 200, 200)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} 
