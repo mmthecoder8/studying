@@ -1,0 +1,180 @@
+/*--------------------------------------------------------------------------------------Pseudo Elementos--
+There is many pseudo, use w3schools to know them*/
+
+
+#pPE::first-letter{
+    color: aqua;
+    font-size: 3em;
+}
+
+#pPE::first-line{
+    color: lightblue;
+}
+
+#pPE::selection{
+    background-color: lightblue;
+    color: black;
+}
+
+#ulPE{
+    list-style: none;
+}
+
+.liPE::before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../Intermediario/basquete.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------ Seletores
+There is some examples of how you could select specifics elements*/
+
+/* use can use "*" to select literally everything from your page, so if you write *{margin = 0}, every single
+element of the page receive this value*/
+
+/* The basic ones are: tag, classes and ids. I wrote in this sequence each of them */
+
+hr{
+    margin: 100px 0;
+}
+
+.pwc{
+    font-weight: bold;
+}
+
+.pwi{
+    font-style: italic;
+}
+
+/* You can use 2 or more selectors */
+
+h1, .h3, #h5{
+    background-color: gray;
+}
+
+/* You can select a specific element which is inside other */
+
+section p{
+    color: red;
+}
+
+/* When you use '>' you specify the parent element, so in this example, it will apply to all 'p' elements 
+whose parent is the article." */
+
+article > p{
+    color: red;
+}
+
+/* When you use '+' you are selecting the first element(or selector) after some other selector, 
+so in this example, it will apply to first 'p' after the section */
+
+section + .extra{ /* I wrote as class here because just to make a pattern with the next example */
+    color: blue;
+}
+
+/* When you use '~' you are selecting all elements(or selectors) after some other selector, 
+so in this example, it will apply to all 'p's after the article */
+
+article ~ .extra{ /* I wrote as class here because I didn't want that all my next 'p' got green */
+    color: green;
+}
+
+/* You can use attributes as selectors */
+
+[example]{
+    background-color: gray;
+}
+
+/* You can use some digits to especify something */
+
+/*In this first example bellow, you are espeficying the value of the attribute*/
+
+[example="200"]{
+    color: greenyellow;
+}
+
+/* With "~=" you especify what value */
+
+[title~="title"]{
+    background-color: blue;
+}
+
+/* With "^=" you especify what starter digits */
+
+
+[title^="t"]{
+    font-weight: bold;
+}
+
+[title^="ti"]{
+    font-style: italic;
+}
+
+/* With "$=" you especify what ended digits */
+
+[title$="1"]{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* With "*=" you especify digits that can be anywhere as value */
+
+[title*="tl"]{
+    text-decoration: underline;
+}
+
+[title*="ex"]{
+    text-decoration: overline;
+}
+
+/*--------------------------------------------------------------------------------------- Pseudo Classes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
