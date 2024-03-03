@@ -134,28 +134,298 @@ article ~ .extra{ /* I wrote as class here because I didn't want that all my nex
     text-decoration: overline;
 }
 
-/*--------------------------------------------------------------------------------------- Pseudo Classes */
+/*--------------------------------------------------------------------------------------- Pseudo Classes 
+There is many pseudo-classes, use w3schools to know them*/
+
+.iPC:focus{
+    color: red;
+}
+
+#ulPC{
+    list-style: none;
+}
+
+
+.liPC:first-child{
+    color: green;
+}
+
+
+.liPC:nth-of-type(3n){ /*3n selects the elements "divided" by three, three by three elements. 
+                        It can be any number Xn*/
+    color: gray;
+}
+
+.liPC:nth-of-type(3n +1){
+    color: darkviolet;
+}
+
+.liPC:nth-of-type(even){
+    background-color: bisque;
+}
+
+.liPC:nth-of-type(odd){
+    background-color: lightgreen;
+}
 
 
 
 
+/*------------------------------------------------------------------------------------------ Função Calc CSS
+*/
+#body{
+    margin: 0;
+    padding: 0;
+}
+
+#fFC1{
+    width: 100%;
+    height: 400px;
+    background-color: aqua;
+}
+
+#cFC1{
+    display: inline-block;
+    width: calc(100% - 300px);
+    margin-right: -4px; /*Comment this line to see the difference */
+    height: 200px;
+    background-color: green;
+}
+
+#cFC2{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+
+
+#fFC2{
+    width: 100%;
+    height: 150px;
+    background-color: red;
+}
+
+#cFC3{
+    width: calc(100% - 200px);
+    height: 100px;
+    background-color: blue;
+    margin: auto;
+}
+
+/*------------------------------------------------------------------------------------------ Transformações
+*/
+
+#imgT1{             /*x, y*/
+    transform: scale(1, 1.3);
+}
+
+#imgT2{
+    transform: rotate(35deg);
+}
+
+#imgT3{             /*x, y*/
+    transform: skew(35deg);
+}
+
+/*------------------------------------------------------------------------------------------- Variáveis em CSS
+*/
+
+:root{
+    --var-color: cyan;
+
+    --square-size: 50px;
+}
+
+#p2{
+    color: var(--var-color);
+    font-size: 20px
+}
+
+#p3{
+    color: var(--var-color);
+    font-size: 25px
+}
+
+#square1{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: blue;
+}
+
+#square2{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: red;
+}
 
 
 
 
+/*---------------------------------------------------------------------------------------------------- FlexBox
+--*/
+
+/*--------------------------------------------------- Flex Direction 
+*/
+
+.FD{
+    background-color: grey;
+    height: 300px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.fd1{
+    display: flex;
+    flex: row;
+}
+
+.fd2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.rect{
+    width: 200px;
+    height: 200px;
+}
+
+.rect2{
+    width: 340px;
+    height: 200px;
+}
+
+.r1{
+    background-color: red;
+}
+
+.r2{
+    background-color: green;
+}
+
+.r3{
+    background-color: blue;
+}
 
 
 
 
+/*--------------------------------------------------- Wrap
+    You need to reduce the page size (with the mouse) to see the difference
+*/
+
+.fd3{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+
+/*--------------------------------------------------- Flex Flow
+    Useful to unify properties
+*/
+
+.fd4{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    margin-bottom: 150px;
+}
+
+/*--------------------------------------------------- Justify Content + Align Items
+They can receive these values:
+justify-content:flex-start | flex-end | center | space-between | space-around | space-evenly | start | end |left
+
+align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end |
+self-start | self-end
+*/
+
+.fd5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 
+/*--------------------------------------------------- Align Content
+    Aling items define the elements positions based on the lines. 
+    O Align Content define the lines positions based on the father
+*/
+.FD2{
+    background-color: grey;
+    height: 600px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.fd6{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.fd7{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
 
 
+/*--------------------------------------------------- Grow/Shrink
+    The real responsity with flex starts with it
+*/
+
+.fd8{
+    display: flex;
+}
+
+.grow1{
+    flex-grow: 1;
+}
+/* With grow the element starts to grow based on the page size, the width doesn't matter anymore here*/
+.grow2{
+    flex-grow: 2;
+}
+
+.shrink{ /* With shrink: 0 the element don't reduce your size*/
+    flex-shrink: 0;
+}
 
 
+/*--------------------------------------------------- Ordem
+*/
 
+.fd9{
+    display: flex;
+}
 
+.orderX{
+    order: 1;
+}
 
+.orderY{
+    order: 2;
+}
+
+.orderZ{
+    order: 3;
+}
+
+/*--------------------------------------------------- Align Self
+    Works equal align items but you only use in one element
+*/ 
+
+.fd10{
+    display: flex;
+}
+
+.AS{
+    align-self: flex-end;
+}
 
 
 
