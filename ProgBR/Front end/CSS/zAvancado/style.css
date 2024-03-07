@@ -537,8 +537,7 @@ self-start | self-end
 }
 
 .Item3{
-    grid-column-start: 3;
-    grid-column-end: 7;
+    grid-column-end: span 4;
 }
 
 .Item4{
@@ -558,46 +557,3 @@ self-start | self-end
     grid-column-end: 5;
     grid-row-start: 3;
 }
-
-
-/*
-
-    grid-row-start: 2;
-    grid-row-end: 4;
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
