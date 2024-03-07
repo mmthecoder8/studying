@@ -29,7 +29,7 @@ a{
     }
 
     #container{
-        width: 90vw;
+        width: 90%;
         margin: auto;
         padding: 1em;
     }
@@ -59,21 +59,28 @@ p{
     margin-top: 20px;
     border-radius: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 20px;
 }
 
+.socialName{
+    color: white;
+    margin: 0 5% 0;
+    padding: 15px;
+}
+
 .icon{
-    width: 40px;
-    margin: 0;
+    width: 20px;
+    margin: 0 5% 0;
 }
 
 .icon2{
     width: 30px;
     height: 30px;
-    margin: 2em 1em;
-    padding: 10px;
+    margin: 1em 1em 0 0;
+    padding: 15px;
     border-radius: 50%;
     background-image: linear-gradient(to right, #5578BA , #40a376);
+    overflow: visible;
 }
