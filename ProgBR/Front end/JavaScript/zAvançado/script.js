@@ -108,26 +108,68 @@ insertUser2(" Vini")
 
 tellUsers2(users2)
 .catch((error)=>{
-    console.log(error.msg)
+    tellUsers2(error.msg)
 })
 
 
+/*--------------------------------------------------------------------------------------------------Async Await
+Other way to use promises*/
+
+var users3 = ["Async Await "," Kaiky"," Gabriel"," Heitor"]
+
+function insertUser3 (name){
+    users3.push(name)
+}
+
+function tellUsers3(x){
+    
+    let promise = new Promise(function(resolve, reject){
+
+        setTimeout(() => {
+            let aw = document.getElementById("asyncawait").innerHTML = x
+            
+            let error = false // change here to see the other msg
+
+            if(!error){
+                resolve()
+                return aw
+            }
+            else{
+                reject({msg: "Something went wrong"})
+            }
+            
+        }, 1000)
+    })
+    return promise
+}
 
 
 
+async function execute(){
+
+    await insertUser3(" Bryan")
+    tellUsers3(users3)
+}
+
+execute()
 
 
 
+/*--------------------------------------------------------------------------------------------------Filter*/
 
 
+function addPlayers(name, height){
+    return{name, height}
+}
 
+var players = [
+    addPlayers("Takeru", 1.75),
+    addPlayers("Isaac", 1.98),
+    addPlayers("Kosen", 1.78),
+    addPlayers("Hanzai", 1.8)
+]
 
-
-
-
-
-
-
+console.log(players)
 
 
 
