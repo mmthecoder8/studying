@@ -156,7 +156,7 @@ execute()
 
 
 /*--------------------------------------------------------------------------------------------------Filter*/
-
+console.log("From now on, we have Filter class")
 
 function addPlayers(name, height){
     return{name, height}
@@ -170,6 +170,221 @@ var players = [
 ]
 
 console.log(players)
+
+
+function higherThan179(player){
+    return player.height > 1.79
+}
+
+var playersHigherThan179 = players.filter(higherThan179)
+
+console.log(playersHigherThan179)
+
+
+/*--------------------------------------------------------------------------------------------------Map*/
+console.log("From now on, we have Map class")
+
+var players2 = [
+    addPlayers("Zaki", 1.69),
+    addPlayers("Takeshi", 1.81),
+    addPlayers("Maya", 1.68),
+    addPlayers("Miyaga", 1.85),
+    addPlayers("Tori", 1.46)
+]
+
+function nameAge(player){
+    return player.name + " is " + player.height + " tall"
+}
+
+console.log(players2.map(nameAge))
+
+
+
+
+/*------------------------------------------------------------------------------------------Valor vs Referência
+An attribution by value creates a copy from a original element, any changes on the copy doesn't affect the
+original.
+An attribution by reference creates a "nickname" of the original element. Any changes on the copy/nickname affects
+the original element. There are examples below
+*/
+console.log("From now on, we have Valor vs Referência class")
+
+// by Value, it happens on "primitive" values, like strings, numbers and booleans
+
+var a = 12 //you can change to see that happens the same thing: "string" or false/true
+
+var b = a
+
+b = 21 //you can change to see that happens the same thing: "gnirts" or true/false
+
+console.log("A" + a, "B" + b)
+
+
+// by reference, it happens on objects and arrays
+// first a example with an array
+
+var classA = ["Miguel", "Thayna", "Giovana"]
+
+var classB = classA
+
+classB.push("Esdras")
+
+console.log(classA, classB)
+
+// now a example with an object
+
+function addPerson(name, age){
+    return{name, age}
+}
+
+var randomPeople = [
+    addPerson("Gisvanda", 70)
+]
+
+function person5YearsAhead(person){
+    person.age += 5
+    return person
+}
+
+console.log(randomPeople)
+console.log(randomPeople.map(person5YearsAhead))
+
+
+
+// How to create copies of arrays and objects
+
+// first the examples with an array
+
+var classC = ["Ester", "Natally", "Pietra"]
+
+var classD = [...classC] // You can do the same thing with the line below
+/// var classD = classC.slice()
+
+classD.push("Felipe")
+
+console.log(classC, classD)
+
+
+// now the examples with an object
+
+var studentA = {name: "Helen", age: "17"}
+
+var studentB = {...studentA} // You can do the same thing with the line below
+// var studentB = Object.assign({}, studentA)
+
+studentB.name = "Olivera"
+
+console.log(studentA, studentB)
+
+
+/*-----------------------------------------------------------------------------------------------Spread Operator
+It is the "..." to create a copy of a object or array*/
+console.log("From now on, we have Spread Operator class")
+
+
+// You can merge/add information with Spread Operator
+
+var person = {
+    name: "Joseph",
+    age: 34
+}
+
+var contact = {
+    email: "joseph@email.com",
+    phone: 12345678
+}
+
+var copy = {...person, city: "Calgary", ...contact,}
+copy.name = "Alex"
+copy.email = "alex@email.com"
+
+console.log(person, copy)
+
+
+
+/*------------------------------------------------------------------------------------Desestruturando um objeto*/
+console.log("From now on, we have Desestruturando um objeto class")
+
+var athlete1 = {
+    name: "Max",
+    age: 21, 
+    country: "Russia",
+    statusActive: true
+}
+
+var athlete2 = {
+    name: "Matias",
+    age: 26, 
+    country: "Argentina",
+    statusActive: true
+}
+
+console.log(athlete1)
+console.log(athlete2)
+
+
+var {name} = athlete1
+
+console.log(name)
+
+var {age, country, ...others} = athlete2
+
+console.log(age)
+console.log(country)
+console.log(others)
+
+// I don't know how to translate "desestruturar" so, nessa aula também é ensinado a desestruturar arrays
+
+var athletes = [athlete1, athlete2]
+
+console.log(athletes)
+
+var [Max, ...otherss] = athletes
+
+console.log(Max)
+
+console.log(otherss)
+
+
+/*-------------------------------------------------------------------------------------------------------Reduce*/
+console.log("From now on, we have Reduce class")
+
+function addMember(nick, age){
+    return {nick, age}
+}
+
+var karmine = [
+    addMember("Shin", 21),
+    addMember("Magnum", 22),
+    addMember("marteen", 19),
+    addMember("N4RRATE", 21),
+    addMember("tomaszy", 18),
+]
+
+function averageAge(total, age){
+    return total + Math.round(age.age / karmine.length)
+}
+
+console.log(karmine.reduce(averageAge, 0))
+
+// Reduce doesn't have to end as number
+
+function justAExample(total, nicks){
+    return total + nicks.nick
+}
+
+console.log(karmine.reduce(justAExample, "something before, it could be blank"))
+
+/*-----------------------------------------------------------------------------------------------------Desafio*/
+console.log("From now on, we have Desafio class")
+
+/*-------------------------------------------------------------------------------------------------------Fetch
+I've decided to study this better when I start to study node*/
+
+/*---------------------------------------------------------------------------------------------------try catch*/
+
+
+
 
 
 
