@@ -1,0 +1,202 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+}
+
+/*-------------------------------------------------------------------------------Primeira Animação - Keyframes--*/
+
+@keyframes changeColor{
+
+    from {background-color: red;}
+    to {background-color: blue;}
+
+}
+
+#PAK{
+    animation-name: changeColor;
+    animation-duration: 5s;
+}
+
+/*------------------------------------------------------------------------------Adicionando estados a animação--*/
+
+@keyframes AEA{
+    0% {background-color: green;}
+    24% {background-color: aqua;}
+    50% {background-color: blueviolet;}
+    100% {background-color: yellow;}
+}
+
+#AEA{
+    animation-name: AEA;
+    animation-duration: 5s;
+}
+
+/*-----------------------------------------------------------------------------------------------Propriedades--*/
+
+@keyframes Prop{
+    0% {background-color: lightcoral; width: 200px;}
+    50% {background-color: lightcyan; width: 400px; /*height: 100px;*/}
+    100% {background-color: lightgreen; width: 200px;}
+}
+
+#Prop{
+    animation-name: Prop;
+    animation-duration: 6s;
+}
+
+/*-----------------------------------------------------------------------------------------------Delay--*/
+
+@keyframes Delay{
+    0% {background-color: red; }
+    50% {background-color: black; width: 300px;}
+    100% {background-color: lightgreen; }
+}
+
+#Delay{
+    animation-name: Delay;
+    animation-duration: 6s;
+    animation-delay: -3s; /*Obviously that can receive a positive value */
+}
+
+/*-----------------------------------------------------------------------------------------------Loop--*/
+
+@keyframes Loop{
+    0% {background-color: lightcoral; }
+    50% {background-color: cornflowerblue;}
+    100% {background-color: lightgreen; }
+}
+
+#Loop{
+    animation-name: Loop;
+    animation-duration: 6s;
+    animation-iteration-count: 3;
+}
+
+/*-----------------------------------------------------------------------------------------------Direction--*/
+
+@keyframes Direction{
+    0% {background-color: purple; }
+    33%{background-color: black;}
+    66% {background-color: yellow;}
+    100% {background-color: green; }
+}
+
+#Dire{
+    animation-name: Direction;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+}
+
+/*-----------------------------------------------------------------------------------------------Fill Mode--*/
+
+@keyframes FM{
+    0% {background-color: khaki; }
+    33%{background-color: darkslateblue;}
+    66% {background-color: darkslategrey;}
+    100% {background-color: aquamarine; }
+}
+
+#FM{
+    animation-name: FM;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+#FM2{
+    animation-name: FM;
+    animation-duration: 6s;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+}
+
+#FM3{
+    animation-name: FM;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+}
+
+/*--------------------------------------------------------------------------------------------Timing Function--*/
+
+@keyframes TF {
+    0% {left: 0px;}
+    100% {left: 600px;}
+}
+
+.TF{
+    position: relative;
+    animation-name: TF;
+    animation-duration: 5s;
+    /* I made them to comeback to the beginning with this two lines below */
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+.n1{
+    animation-timing-function: linear;
+}
+
+.n2{
+    animation-timing-function: ease;
+}
+
+.n3{
+    animation-timing-function: ease-in;
+}
+
+.n4{
+    animation-timing-function: ease-out;
+}
+
+.n5{
+    animation-timing-function: ease-in-out;
+}
+
+#end{
+    border: none;
+    position: absolute;
+    left: 814px;
+    top: 1850px;
+    width: 100px;
+    height: 1050px;
+    background-color: red;
+}
+
+/*-----------------------------------------------------------------------------------------------Short Hand--*/
+
+@keyframes SH {
+    0% {background-color: lightcoral; }
+    50% {background-color: cornflowerblue;}
+    100% {background-color: lightgreen; }
+}
+
+#SH{
+    animation: SH 5s linear 0s 1 normal forwards;
+}
+
+/*-----------------------------------------------------------------------------------------------Transitions--*/
+
+#T{
+    border: none;
+    background-color: cornflowerblue;
+
+    transition-property: background-color, padding;/*Can receive "all" as value, but the next comment won't work*/
+    transition-duration: 500ms;
+    transition-delay: 500ms, 1s; /*with comma you can separate the properties, in this case, 500ms works to 
+                                   background and 1s works to padding */
+    transition-timing-function: ease-in;
+
+    /* Short hand
+    transition: background-color 500ms 500ms ease-in, padding 500ms 1s ease-in;
+    */
+}
+
+#T:hover{
+    background-color: rgb(69, 102, 163);
+    padding: 10px;
+}

@@ -382,10 +382,25 @@ console.log("From now on, we have Desafio class")
 I've decided to study this better when I start to study node*/
 
 /*---------------------------------------------------------------------------------------------------try catch*/
+console.log("From now on, we have try catch class")
+
+var full = ""
+
+try{
+    // console.log(abc)
+
+    if(full == ""){
+        throw "Full can't be empty"
+    }
+
+}catch (err){
+
+    console.log("Houve um erro", err)
 
 
+}
 
-
+console.log("This should appear even if there is a error")
 
 
 
