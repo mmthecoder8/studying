@@ -33,6 +33,7 @@ let bindedFunction = speakGeneric.bind(dog)
 
 bindedFunction()
 
+
 /*--------------------------------------------------------------------------------------------Arrow Functions
 you can create shorter functions but arrow functions don't understand well the "this" and the "bind"*/
 console.log("From now on, we have Arrow Functions class")
@@ -72,6 +73,7 @@ function tellUsers(x){
 insertUser(" Bruno")
 
 tellUsers(users)
+
 
 /*-------------------------------------------------------------------------------------------------Promises
 Similar to callbacks, but better and doing a little bit more*/
@@ -154,7 +156,6 @@ async function execute(){
 execute()
 
 
-
 /*--------------------------------------------------------------------------------------------------Filter*/
 console.log("From now on, we have Filter class")
 
@@ -192,13 +193,11 @@ var players2 = [
     addPlayers("Tori", 1.46)
 ]
 
-function nameAge(player){
+function nameHeight(player){
     return player.name + " is " + player.height + " tall"
 }
 
-console.log(players2.map(nameAge))
-
-
+console.log(players2.map(nameHeight))
 
 
 /*------------------------------------------------------------------------------------------Valor vs Referência
@@ -378,6 +377,34 @@ console.log(karmine.reduce(justAExample, "something before, it could be blank"))
 /*-----------------------------------------------------------------------------------------------------Desafio*/
 console.log("From now on, we have Desafio class")
 
+// recreating map
+
+function mappedPlayers(){
+    let mappedPlayers = []
+    for(let player of players2){
+        mappedPlayers.push(player.name + " is " + player.height + " tall")
+    }
+    return mappedPlayers
+}
+
+console.log(mappedPlayers())
+
+
+
+// recreating reduce
+
+function reducedKarmine(){
+    let reducedKarmine = ""
+    reducedKarmine = (
+        Math.round(
+            ((karmine[0].age) + (karmine[1].age) + (karmine[2].age) + (karmine[3].age)+ (karmine[4].age)) / 5
+            )
+        )
+    return reducedKarmine
+}
+
+console.log(reducedKarmine())
+
 /*-------------------------------------------------------------------------------------------------------Fetch
 I've decided to study this better when I start to study node*/
 
@@ -401,32 +428,3 @@ try{
 }
 
 console.log("This should appear even if there is a error")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
