@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Biryani", sans-serif;
+    color: white;
+    background-color: midnightblue;
+}
+
+
+header, footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px; 
+}
+
+a:hover{
+    color: black;
+}
+
+#email{
+    height: 25px;
+    transform: translateY(25%);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+section{
+    width: 500px;
+    background-color: lightblue;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
