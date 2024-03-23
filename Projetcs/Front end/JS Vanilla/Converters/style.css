@@ -9,21 +9,25 @@ body{
     background-color: midnightblue;
 }
 
-
 header, footer{
     display: flex;
+    background-color: lightblue;
+    height: 48px;
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
     justify-content: space-around;
-    background-color: cornflowerblue;
-    padding: 10px;
 }
 
 footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 28px;
     justify-content: center;
-    align-items: center;
 }
 
 a{
@@ -45,17 +49,29 @@ main{
     display: flex;
     justify-content: center;
     text-align: center;
-    
+    align-items: center;
+    height: 100vh;
 }
 
 section{
-    width: 500px;
-    background-color: lightblue;
+    width: 700px;
+    background-color: cornflowerblue;
     padding: 15px;
     border-radius: 50px;
+    height: 600px;
 }
 
+#mainText{
+    text-align: justify;
+    margin: 15px 50px 0;
+}
 
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px 0;
+}
 
 
 
