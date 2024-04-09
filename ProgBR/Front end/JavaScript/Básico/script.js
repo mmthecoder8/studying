@@ -537,12 +537,13 @@ function criarAluno(nome, n1, n2, n3){
         nota1: n1,
         nota2: n2,
         nota3: n3,
+        media: (n1 + n2 + n3) / 3
+        /*
+        O código estava com dessa forma abaixo q nn funciona antes, como estou revisando aproveitei para arrumar
         media: function () {
             return (this.nota1 + this.nota2 + this.nota3) / 3
-        }
-    }
+        */}
 }
-
 
 
 var turma = [
