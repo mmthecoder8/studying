@@ -95,7 +95,7 @@ article ~ .extra{ /* I wrote as class here because I didn't want that all my nex
 
 /* You can use some digits to especify something */
 
-/*In this first example bellow, you are espeficying the value of the attribute*/
+/*In this first example bellow, you are specifying the value of the attribute*/
 
 [example="200"]{
     color: greenyellow;
@@ -366,6 +366,7 @@ self-start | self-end
     flex-wrap: wrap;
     align-items: center;
 }
+
 
 .fd7{
     display: flex;
