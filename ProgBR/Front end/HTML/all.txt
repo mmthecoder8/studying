@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html
+<head
+    meta
+    title
+    link
+    style
+>
+body
+h1-h6
+p
+b=strong
+i=em
+mark
+small
+sub
+sup
+del
+ins
+br
+a
+img
+<figure
+    figcaption
+>
+ul
+ol
+il
+
+-
+
+<form
+    input
+    <select
+        option
+    >
+>
+hr
+<select
+    option
+>
+textarea
+header
+ nav
+main
+ section
+ article
+footer
+
+-
+
+video
+div
+iframes
+<audio
+    source
+>
+canvas
+script
