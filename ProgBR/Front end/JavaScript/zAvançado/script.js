@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------------------------------------- Strict mode*/
+/*-------------------------------------------------------------------------------------- Strict mode*/
 "use strict"
 /*
 This works without strict mode: 
@@ -9,7 +9,7 @@ But with strict mode you must declare the variable
 var x = 3
 console.log(x)
 
-/*-------------------------------------------------------------------------------------------------This e Bind*/
+/*-------------------------------------------------------------------------------------- This e Bind*/
 
 function speakGeneric(){
     console.log(this.sound)
@@ -34,7 +34,7 @@ let bindedFunction = speakGeneric.bind(dog)
 bindedFunction()
 
 
-/*--------------------------------------------------------------------------------------------Arrow Functions
+/*-------------------------------------------------------------------------------------- Arrow Functions
 you can create shorter functions but arrow functions don't understand well the "this" and the "bind"*/
 console.log("From now on, we have Arrow Functions class")
 
@@ -54,7 +54,7 @@ function double(x){
 */
 
 
-/*-------------------------------------------------------------------------------------------------Callback*/
+/*-------------------------------------------------------------------------------------- Callback*/
 
 var users = ["Callback"," Kaiky"," Gabriel"," Heitor"]
 
@@ -75,7 +75,7 @@ insertUser(" Bruno")
 tellUsers(users)
 
 
-/*-------------------------------------------------------------------------------------------------Promises
+/*-------------------------------------------------------------------------------------- Promises
 Similar to callbacks, but better and doing a little bit more*/
 
 var users2 = ["Promise"," Kaiky"," Gabriel"," Heitor"]
@@ -114,7 +114,7 @@ tellUsers2(users2)
 })
 
 
-/*--------------------------------------------------------------------------------------------------Async Await
+/*-------------------------------------------------------------------------------------- Async Await
 Other way to use promises*/
 
 var users3 = ["Async Await "," Kaiky"," Gabriel"," Heitor"]
@@ -156,7 +156,7 @@ async function execute(){
 execute()
 
 
-/*--------------------------------------------------------------------------------------------------Filter*/
+/*-------------------------------------------------------------------------------------- Filter*/
 console.log("From now on, we have Filter class")
 
 function addPlayers(name, height){
@@ -182,7 +182,7 @@ var playersHigherThan179 = players.filter(higherThan179)
 console.log(playersHigherThan179)
 
 
-/*--------------------------------------------------------------------------------------------------Map*/
+/*-------------------------------------------------------------------------------------- Map*/
 console.log("From now on, we have Map class")
 
 var players2 = [
@@ -200,7 +200,7 @@ function nameHeight(player){
 console.log(players2.map(nameHeight))
 
 
-/*------------------------------------------------------------------------------------------Valor vs Referência
+/*-------------------------------------------------------------------------------------- Valor vs Referência
 An attribution by value creates a copy from a original element, any changes on the copy doesn't affect the
 original.
 An attribution by reference creates a "nickname" of the original element. Any changes on the copy/nickname affects
@@ -276,7 +276,7 @@ studentB.name = "Olivera"
 console.log(studentA, studentB)
 
 
-/*-----------------------------------------------------------------------------------------------Spread Operator
+/*-------------------------------------------------------------------------------------- Spread Operator
 It is the "..." to create a copy of a object or array*/
 console.log("From now on, we have Spread Operator class")
 
@@ -301,7 +301,7 @@ console.log(person, copy)
 
 
 
-/*------------------------------------------------------------------------------------Desestruturando um objeto*/
+/*------------------------------------------------------------------------ Desestruturando um objeto*/
 console.log("From now on, we have Desestruturando um objeto class")
 
 var athlete1 = {
@@ -345,7 +345,7 @@ console.log(Max)
 console.log(otherss)
 
 
-/*-------------------------------------------------------------------------------------------------------Reduce*/
+/*-------------------------------------------------------------------------------------- Reduce*/
 console.log("From now on, we have Reduce class")
 
 function addMember(nick, age){
@@ -374,7 +374,7 @@ function justAExample(total, nicks){
 
 console.log(karmine.reduce(justAExample, "something before, it could be blank"))
 
-/*-----------------------------------------------------------------------------------------------------Desafio*/
+/*-------------------------------------------------------------------------------------- Desafio*/
 console.log("From now on, we have Desafio class")
 
 // recreating map
@@ -405,10 +405,10 @@ function reducedKarmine(){
 
 console.log(reducedKarmine())
 
-/*-------------------------------------------------------------------------------------------------------Fetch
+/*-------------------------------------------------------------------------------------- Fetch
 I've decided to study this better when I start to study node*/
 
-/*---------------------------------------------------------------------------------------------------try catch*/
+/*-------------------------------------------------------------------------------------- try catch*/
 console.log("From now on, we have try catch class")
 
 var full = ""

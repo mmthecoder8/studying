@@ -1,0 +1,95 @@
+console.log
+alert
+
+var
+let
+const
+
++
+-
+*
+/
+%
+++
+--
+&&
+||
+!
+=
+==
+===
+!=
+!==
+>
+<
+>=
+<=
+
+parseInt
+parseFloat
+
+if 
+else if
+else
+switch{
+    case
+    break
+    default
+}
+
+for
+while
+
+Math.random
+    .PI
+    .round
+    .floor
+    .ceil
+
+{object}
+[array]
+
+function name(){}
+let example = x => 
+
+return
+
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+---
+
+document.getElementsByTagName
+        .getElementsByClassName
+        .getElementById
+
+"inside HTML"{
+    onclick()
+}
+.addEventListener()
+
+.children
+.parentElement
+
+JSON.stringify
+JSON.parse
+
+localStorage.setItem
+            .getItem
+            .removeItem
+
+setTimeout
+setInterval
+clearInterval
+
+---
+
+"use strict"
+
+bind
+this
+push
+
+try
+catch
+
+many others things, look JS Avançado

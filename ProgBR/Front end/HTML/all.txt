@@ -57,3 +57,10 @@ iframes
 >
 canvas
 script
+
+
+-
+
+"using with JS"{
+    onclick()
+}
