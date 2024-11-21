@@ -55,11 +55,18 @@ function double(x){
 
 
 /*-------------------------------------------------------------------------------------- Callback*/
+// useful to avoid the delay of some task
 
 var users = ["Callback"," Kaiky"," Gabriel"," Heitor"]
 
+
 function insertUser (name){
     users.push(name)
+}
+
+function sayUsers(y){
+        let cb = document.getElementById("callback").innerHTML = y
+        return cb
 }
 
 function tellUsers(x){
@@ -67,8 +74,10 @@ function tellUsers(x){
     setTimeout(() => {
         let cb = document.getElementById("callback").innerHTML = x
         return cb
-    }, 1000)
+    }, 5000)
 }
+
+sayUsers(users)
 
 insertUser(" Bruno")
 
@@ -80,22 +89,16 @@ Similar to callbacks, but better and doing a little bit more*/
 
 var users2 = ["Promise"," Kaiky"," Gabriel"," Heitor"]
 
-function insertUser2 (name){
-    users2.push(name)
-}
-
-function tellUsers2(x){
+function insertUser2(name){
     
     let promise = new Promise(function(resolve, reject){
 
         setTimeout(() => {
-            let pm = document.getElementById("promise").innerHTML = x
-            
+            users2.push(name)      
             let error = false // change here to see the other msg
 
             if(!error){
                 resolve()
-                return pm
             }
             else{
                 reject({msg: "Something went wrong"})
@@ -106,13 +109,11 @@ function tellUsers2(x){
     return promise
 }
 
-insertUser2(" Vini")
+function tellUsers2(){
+    document.getElementById("promise").innerHTML = users2
+}
 
-tellUsers2(users2)
-.catch((error)=>{
-    tellUsers2(error.msg)
-})
-
+insertUser2(" Luís").then(tellUsers2).catch((error) => console.log(error.msg))
 
 /*-------------------------------------------------------------------------------------- Async Await
 Other way to use promises*/
